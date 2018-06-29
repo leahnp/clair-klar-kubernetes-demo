@@ -1,6 +1,6 @@
 ## Scan Your Docker Containers For Vulnerabilities
 
-*This is a beginner friendly tutorial to introduce Clair, an open source vulnerability scanner. The intent is to give a overview of what is involved in scanning a Docker image for vulnerabilities so you can integrate a container scan task into your CI/CD pipeline. We will setup a demo scanner system using Clair and Klar running in pods in a Kubernetes cluster.*
+*This is a beginner friendly tutorial to introduce the user to Docker image vulnerability scanning. The intent is to give a overview of what is involved in scanning a Docker image for vulnerabilities so you can integrate a container scan task into your CI/CD pipeline. In this tutorial we will setup a demo scanner system using Clair and Klar running in pods in a Kubernetes cluster.*
 
 Before we start - let's talk vocabulary. We are going to talk about Docker, Dockerfiles, containers and images - what's the difference? Docker is a "**container runtime**", it wraps the fundamental concept of containers with tools that help humans build, run and archive containers. There are many container runtimes to help you run containers, we are going to focus on Docker.
 
