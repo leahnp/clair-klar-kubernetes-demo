@@ -1,0 +1,21 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: klar
+spec:
+  template:
+    spec:
+      containers:
+      - name: klar
+        image: leahnp/klar-scratch
+        args:
+          - "quay.io/leahnp/klar:latest"
+        env:
+          - name: CLAIR_ADDR
+            value: "<>"
+          - name: CLAIR_OUTPUT
+            value: "High"
+          - name: CLAIR_THRESHOLD
+            value: "10"
+      restartPolicy: Never
+  backoffLimit: 4
