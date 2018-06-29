@@ -9,7 +9,7 @@ spec:
       - name: klar
         image: leahnp/klar-scratch
         args:
-          - "quay.io/leahnp/klar:latest"
+          - "quay.io/samsung_cnct/fluentd-central:latest"
         env:
           - name: CLAIR_ADDR
             value: "<>"

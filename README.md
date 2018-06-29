@@ -1,6 +1,6 @@
 ## Scan Your Docker Containers For Vulnerabilities
 
-This tutorial will look at how to scan a Docker image for security vulnerabilities and ideas for integrating a security scan into your CI/CD platform. We will setup a demo scanner system using Clair and Klar running in pods in a Kubernetes cluster.
+*This is a beginner friendly tutorial to introduce Clair, an open source vulnerability scanner. The intent is to give a overview of what is involved in scanning a Docker image for vulnerabilities so you can integrate a container scan task into your CI/CD pipeline. We will setup a demo scanner system using Clair and Klar running in pods in a Kubernetes cluster.*
 
 Before we start - let's talk vocabulary. We are going to talk about Docker, Dockerfiles, containers and images - what's the difference? Docker is a "**container runtime**", it wraps the fundamental concept of containers with tools that help humans build, run and archive containers. There are many container runtimes to help you run containers, we are going to focus on Docker.
 
@@ -72,7 +72,7 @@ So, the process exited successfully with a `0`, let's modify the maximum vulnera
 * `> kubectl delete job klar`
 * `> kubectl create -f klar.yaml`
 
-If you take a look at the logs, you should see the same output, but if you describe the pod you will notice the exit status is 1, indicating the maximum vulnerabilities were exceeded. If you want to try scanning a different image, change the arg we pass to klar in the `klar.yaml` file (currently it is: `quay.io/leahnp/klar:latest`).
+If you take a look at the logs, you should see the same output, but if you describe the pod you will notice the exit status is 1, indicating the maximum vulnerabilities were exceeded. If you want to try scanning a different image, change the arg we pass to klar in the `klar.yaml` file (currently it is: `quay.io/samsung_cnct/fluentd-central:latest`).
 
 So, what level of risk is appropriate? This question really depends on your company and the details of what is running in the container and where. You should work with your team to outline a strategy and best practices approach to vulnerability levels and patterns to address fixes. 
 
